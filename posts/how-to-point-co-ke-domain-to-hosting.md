@@ -1,13 +1,11 @@
 ---
-title: "How to Point Your .co.ke Domain to Your Hosting (Simple Guide for Kenyan Website Owners)"
-author: Philip
-category: Guides
+title: How to Point Your .co.ke Domain to Your Hosting (Simple Guide for Kenyan Website Owners)
+excerpt: A simple, step-by-step guide for Kenyan website owners on how to point your .co.ke domain to your hosting provider. Covers Truehost, HostPinnacle, Novahost, and more.
+author: HostVault Team
 date: July 8, 2025
 readTime: 7 min read
-excerpt: A simple, step-by-step guide for Kenyan website owners on how to point your .co.ke domain to your hosting provider. Covers Truehost, HostPinnacle, Novahost, and more.
+category: Guides
 image_color: linear-gradient(135deg,#f093fb,#f5576c)
-featured: true
-tags: Domain, DNS, Kenya, Truehost, HostPinnacle, Novahost, Beginner Guide
 ---
 
 You have just done something exciting. You bought a domain name, maybe something like yourbusiness.co.ke, and you also bought hosting from a Kenyan hosting company. You are ready to see your website live.
@@ -38,8 +36,8 @@ If you bought your domain and your hosting from the same company, this whole pro
 
 Every hosting company gives you a set of nameservers that look something like this:
 
-ns1.hostingcompany.com
-ns2.hostingcompany.com
+`ns1.hostingcompany.com`
+`ns2.hostingcompany.com`
 
 Here is where to find them depending on your host.
 
@@ -49,7 +47,10 @@ Here is where to find them depending on your host.
 
 **Novahost.** Log into your Novahost account dashboard. Under your hosting plan, the nameserver details are shown clearly, often in a welcome email as well.
 
-[TIP] Can't Find Your Nameservers? | If you cannot find them anywhere, do not guess. Open a support ticket or send a WhatsApp message to your host and simply ask, "What are the nameservers for my hosting account?" Any hosting company worth your money will answer this in minutes.
+<div class="callout">
+  <div class="callout-title">💡 Can't Find Your Nameservers?</div>
+  <p>If you cannot find them anywhere, do not guess. Open a support ticket or send a WhatsApp message to your host and simply ask, "What are the nameservers for my hosting account?" Any hosting company worth your money will answer this in minutes.</p>
+</div>
 
 ## Step 2: Log Into Where You Bought Your Domain
 
