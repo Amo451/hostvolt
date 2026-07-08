@@ -1,12 +1,14 @@
 ---
 title: How to Accept M-Pesa Payments on a WordPress Site in Kenya (Daraja API, Step by Step)
 excerpt: A plain-English walkthrough for connecting your WooCommerce store to M-Pesa using Safaricom's Daraja API, no developer required.
-author: Phil
+author: James Mercer
 date: July 8, 2026
 readTime: 7 min read
 category: Guides
 image_color: linear-gradient(135deg,#0f9d58,#38f9d7)
 ---
+
+Picture this. A customer lands on your website at nine at night, phone in hand, ready to buy. They add an item to cart, get to checkout, and then stop. There's no M-Pesa option. Just a Paybill number typed out in plain text and a line asking them to pay manually and WhatsApp you a screenshot. Half of those customers close the tab right there. Not because they didn't want to buy, but because the whole thing suddenly felt like too much work for nine at night.
 
 That gap between "wants to buy" and "gave up at checkout" is where a lot of Kenyan businesses are quietly losing money. Your customers aren't carrying credit cards. They're carrying a phone with an M-Pesa balance, and they've been trained by every matatu fare, every shop till, every electricity bill to expect one thing at the point of payment, a PIN prompt and a beep. Anything less than that reads as friction.
 
