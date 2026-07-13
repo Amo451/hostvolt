@@ -945,13 +945,20 @@ function postCardHTML(p){
     </div>
   </article>`;
 }
+const HOMEPAGE_POST_LIMIT = 6;
 
 function renderPosts(){
   if(posts.length===0){
     document.getElementById('postsGrid').innerHTML = `<div class="posts-error">No articles published yet.</div>`;
+    document.getElementById('postsSeeMoreWrap').style.display='none';
     return;
   }
-  document.getElementById('postsGrid').innerHTML=posts.map(p=>postCardHTML(p)).join('');
+  document.getElementById('postsGrid').innerHTML=posts.slice(0,HOMEPAGE_POST_LIMIT).map(p=>postCardHTML(p)).join('');
+  document.getElementById('postsSeeMoreWrap').style.display = posts.length>HOMEPAGE_POST_LIMIT ? 'block' : 'none';
+}
+
+function renderAllPosts(){
+  document.getElementById('allPostsGrid').innerHTML = posts.map(p=>postCardHTML(p)).join('');
 }
 
 function renderFAQ(){
@@ -993,6 +1000,7 @@ function openArticle(id){
   document.getElementById('relatedPosts').innerHTML=
     posts.filter(p=>p.id!==id).slice(0,3).map(p=>postCardHTML(p)).join('');
   document.getElementById('homeView').classList.add('hidden');
+  document.getElementById('allArticlesPage').classList.remove('active');
   document.getElementById('articlePage').classList.add('active');
   window.scrollTo({top:0,behavior:'smooth'});
   document.title=`${post.title} — HostVault`;
@@ -1001,6 +1009,7 @@ function openArticle(id){
 function showHome(){
   document.getElementById('homeView').classList.remove('hidden');
   document.getElementById('articlePage').classList.remove('active');
+  document.getElementById('allArticlesPage').classList.remove('active');
   document.title='HostVault – Honest Web Hosting Reviews & Comparisons 2025';
   window.scrollTo({top:0,behavior:'smooth'});
 }
