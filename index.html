@@ -6,14 +6,34 @@
   <title>HostVault – Honest Web Hosting Reviews & Comparisons 2025</title>
   <meta name="description" content="HostVault provides in-depth, unbiased web hosting reviews and side-by-side comparisons. Find the best hosting plan for your budget and needs in 2025." />
   <meta name="keywords" content="best web hosting, web hosting reviews, cheap web hosting, WordPress hosting, managed hosting, hosting comparison 2025" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://host-vault.vercel.app/" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="theme-color" content="#1a56db" />
+  <link rel="canonical" href="https://hostvolt.co.ke/" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/favicon.svg" />
+
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="HostVault" />
   <meta property="og:title" content="HostVault – Honest Web Hosting Reviews & Comparisons 2025" />
   <meta property="og:description" content="Tested 40+ hosting providers so you don't have to. Real speed tests, real uptime data, zero fluff." />
-  <meta property="og:url" content="https://host-vault.vercel.app/" />
+  <meta property="og:url" content="https://hostvolt.co.ke/" />
+  <meta property="og:image" content="https://hostvolt.co.ke/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"HostVault","url":"https://host-vault.vercel.app"}</script>
+  <meta name="twitter:title" content="HostVault – Honest Web Hosting Reviews & Comparisons 2025" />
+  <meta name="twitter:description" content="Tested 40+ hosting providers so you don't have to. Real speed tests, real uptime data, zero fluff." />
+  <meta name="twitter:image" content="https://hostvolt.co.ke/og-image.png" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"HostVault","url":"https://hostvolt.co.ke"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"HostVault","url":"https://hostvolt.co.ke","logo":"https://hostvolt.co.ke/favicon.svg","sameAs":[]}</script>
+  <script id="faqSchema" type="application/ld+json"></script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
@@ -62,11 +82,26 @@
 
     /* ── HERO ── */
     .hero{position:relative;overflow:hidden;padding:96px 0 80px;background:linear-gradient(160deg,#f0f4ff 0%,#fafbff 60%,#fff 100%);}
-    .hero::before{content:'';position:absolute;top:-200px;right:-200px;width:700px;height:700px;background:radial-gradient(circle,rgba(26,86,219,.07) 0%,transparent 70%);pointer-events:none;}
+    .hero::before{content:'';position:absolute;top:-200px;right:-200px;width:700px;height:700px;background:radial-gradient(circle,rgba(26,86,219,.09) 0%,transparent 70%);pointer-events:none;animation:blobDrift1 16s ease-in-out infinite;}
+    .hero::after{content:'';position:absolute;bottom:-260px;left:-220px;width:640px;height:640px;background:radial-gradient(circle,rgba(245,158,11,.08) 0%,transparent 70%);pointer-events:none;animation:blobDrift2 20s ease-in-out infinite;}
+    @keyframes blobDrift1{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(-40px,30px) scale(1.08);}}
+    @keyframes blobDrift2{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(30px,-30px) scale(1.1);}}
+    .hero-grid-fade{position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(circle,rgba(26,86,219,.14) 1px,transparent 1.4px);background-size:28px 28px;-webkit-mask-image:radial-gradient(ellipse 60% 50% at 50% 0%,#000 0%,transparent 75%);mask-image:radial-gradient(ellipse 60% 50% at 50% 0%,#000 0%,transparent 75%);opacity:.6;}
+    .hero-chip{position:absolute;display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.85);backdrop-filter:blur(10px);border:1px solid var(--border);box-shadow:var(--shadow-md);padding:9px 16px;border-radius:100px;font-size:0.78rem;font-weight:600;color:var(--ink-light);pointer-events:none;opacity:0;}
+    .hero-chip svg{flex-shrink:0;}
+    .hero-chip-1{top:18%;left:4%;animation:chipFadeIn .7s ease .9s forwards,chipFloat 6s ease-in-out 1.6s infinite;}
+    .hero-chip-2{top:62%;left:1%;animation:chipFadeIn .7s ease 1.1s forwards,chipFloat 7s ease-in-out 1.8s infinite;}
+    .hero-chip-3{top:12%;right:3%;animation:chipFadeIn .7s ease 1.3s forwards,chipFloat 6.5s ease-in-out 2s infinite;}
+    .hero-chip-4{top:64%;right:1%;animation:chipFadeIn .7s ease 1.5s forwards,chipFloat 7.5s ease-in-out 2.2s infinite;}
+    @keyframes chipFadeIn{to{opacity:1;}}
+    @keyframes chipFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
+    @media (max-width:900px){.hero-chip{display:none;}}
     .hero-inner{position:relative;z-index:1;max-width:780px;margin:0 auto;text-align:center;}
-    .hero-badge{display:inline-flex;align-items:center;gap:6px;background:var(--gold-light);color:#92400e;border:1px solid #fcd34d;padding:5px 14px;border-radius:100px;font-size:0.8rem;font-weight:600;margin-bottom:28px;}
+    .hero-badge{display:inline-flex;align-items:center;gap:6px;background:var(--gold-light);color:#92400e;border:1px solid #fcd34d;padding:5px 14px;border-radius:100px;font-size:0.8rem;font-weight:600;margin-bottom:28px;box-shadow:0 0 0 0 rgba(245,158,11,.4);animation:fadeUp .6s ease forwards,badgePulse 2.6s ease-in-out 1s infinite;}
+    @keyframes badgePulse{0%,100%{box-shadow:0 0 0 0 rgba(245,158,11,.25);}50%{box-shadow:0 0 0 6px rgba(245,158,11,0);}}
     .hero h1{font-family:var(--font-display);font-size:clamp(2.4rem,5vw,3.8rem);line-height:1.13;letter-spacing:-0.03em;color:var(--ink);margin-bottom:20px;}
-    .hero h1 em{font-style:italic;color:var(--accent);}
+    .hero h1 em{font-style:italic;background:linear-gradient(90deg,var(--accent) 0%,#5b8def 30%,var(--accent) 60%,#5b8def 100%);background-size:220% auto;background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:shimmer 5s linear infinite;}
+    @keyframes shimmer{to{background-position:-220% center;}}
     .hero-sub{font-size:1.15rem;color:var(--ink-light);max-width:560px;margin:0 auto 40px;line-height:1.7;font-weight:300;}
     .hero-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:64px;}
     .btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:white;padding:14px 28px;border-radius:10px;font-weight:600;font-size:0.95rem;transition:all var(--t);box-shadow:0 4px 14px rgba(26,86,219,.3);}
@@ -288,6 +323,19 @@
     .fade-up{animation:fadeUp 0.6s ease forwards;opacity:0;}
     .fade-up-1{animation-delay:.1s}.fade-up-2{animation-delay:.2s}.fade-up-3{animation-delay:.3s}.fade-up-4{animation-delay:.4s}
 
+    /* ── SCROLL REVEAL (applied to section headers, cards, rows as they enter view) ── */
+    .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(0.4,0,0.2,1),transform .7s cubic-bezier(0.4,0,0.2,1);}
+    .reveal.in-view{opacity:1;transform:translateY(0);}
+    .reveal-stagger.in-view{transition-delay:calc(var(--i,0) * 70ms);}
+
+    /* subtle lift-in for stat numbers */
+    .stat-item{transition:transform var(--t);}
+    .hero-stats.in-view .stat-item:hover{transform:translateY(-3px);}
+
+    @media (prefers-reduced-motion: reduce){
+      *, *::before, *::after{animation-duration:0.001ms !important;animation-iteration-count:1 !important;transition-duration:0.001ms !important;}
+    }
+
     @media(max-width:900px){
       .host-card{grid-template-columns:auto 1fr;}
       .host-cta{grid-column:1/-1;flex-direction:row;align-items:center;justify-content:space-between;padding-top:16px;border-top:1px solid var(--border);}
@@ -351,6 +399,11 @@
 
   <!-- HERO -->
   <section class="hero">
+    <div class="hero-grid-fade" aria-hidden="true"></div>
+    <div class="hero-chip hero-chip-1" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1L8.5 5H13L9.5 7.5L10.8 12L7 9.3L3.2 12L4.5 7.5L1 5H5.5L7 1Z" fill="#f59e0b"/></svg>4.9★ SiteGround</div>
+    <div class="hero-chip hero-chip-2" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1V13M1 7H13" stroke="#059669" stroke-width="1.4" stroke-linecap="round"/></svg>218ms avg load</div>
+    <div class="hero-chip hero-chip-3" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="#1a56db" stroke-width="1.4"/><path d="M4.5 7L6.3 8.8L9.5 5.2" stroke="#1a56db" stroke-width="1.4" stroke-linecap="round"/></svg>99.9% uptime</div>
+    <div class="hero-chip hero-chip-4" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1L1 4V7C1 10 3.5 12.5 7 13C10.5 12.5 13 10 13 7V4L7 1Z" stroke="#6b7585" stroke-width="1.3" stroke-linejoin="round"/></svg>Zero paid rankings</div>
     <div class="container hero-inner">
       <div class="hero-badge fade-up fade-up-1">⭐ Updated May 2025 — All Hosts Independently Tested</div>
       <h1 class="fade-up fade-up-1">Find the <em>Fastest Host</em><br/>for Your Budget</h1>
@@ -362,17 +415,17 @@
         </a>
         <a href="#compare" class="btn-secondary">Compare Plans <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7H11M11 7L7 3M11 7L7 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
-      <div class="hero-stats fade-up fade-up-4">
-        <div class="stat-item"><div class="stat-value">40+</div><div class="stat-label">Hosts Tested</div></div>
-        <div class="stat-item"><div class="stat-value">3 yrs</div><div class="stat-label">Testing Period</div></div>
-        <div class="stat-item"><div class="stat-value">12K+</div><div class="stat-label">Readers Helped</div></div>
-        <div class="stat-item"><div class="stat-value">99.9%</div><div class="stat-label">Avg Uptime Tracked</div></div>
+      <div class="hero-stats fade-up fade-up-4" id="heroStats">
+        <div class="stat-item"><div class="stat-value" data-count="40" data-suffix="+">0</div><div class="stat-label">Hosts Tested</div></div>
+        <div class="stat-item"><div class="stat-value" data-count="3" data-suffix=" yrs">0</div><div class="stat-label">Testing Period</div></div>
+        <div class="stat-item"><div class="stat-value" data-count="12" data-suffix="K+">0</div><div class="stat-label">Readers Helped</div></div>
+        <div class="stat-item"><div class="stat-value" data-count="99.9" data-suffix="%" data-decimal="1">0</div><div class="stat-label">Avg Uptime Tracked</div></div>
       </div>
     </div>
   </section>
 
   <!-- TRUST BAR -->
-  <div class="trust-bar">
+  <div class="trust-bar reveal">
     <div class="container trust-inner">
       <div class="trust-item"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 2L10.5 6.5H15L11.5 9L13 13.5L9 11L5 13.5L6.5 9L3 6.5H7.5L9 2Z" fill="#f59e0b"/></svg>Independent Reviews</div>
       <div class="trust-item"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/><path d="M6 9L8 11L12 7" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round"/></svg>Real Uptime Monitoring</div>
@@ -385,7 +438,7 @@
   <!-- TOP PICKS -->
   <section class="section" id="top-picks">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal">
         <span class="section-label">Our Top Picks</span>
         <h2 class="section-title">Best Web Hosting Plans for 2025</h2>
         <p class="section-desc">Tested, ranked, and updated every six months. Filter by type or budget to find your match.</p>
@@ -415,13 +468,13 @@
   <!-- COMPARE TABLE -->
   <section class="section section-alt" id="compare">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal">
         <span class="section-label">Side-by-Side</span>
         <h2 class="section-title">Quick Comparison Table</h2>
         <p class="section-desc">All key specs at a glance so you can make a decision without reading every review.</p>
       </div>
       <div class="compare-scroll-hint">← Swipe to see full table →</div>
-      <div class="compare-wrap">
+      <div class="compare-wrap reveal">
         <table class="compare-table">
           <thead><tr><th>Host</th><th>Best For</th><th>Starting Price</th><th>Uptime</th><th>Speed</th><th>Rating</th><th></th></tr></thead>
           <tbody id="compareTableBody"></tbody>
@@ -433,28 +486,28 @@
   <!-- METHODOLOGY -->
   <section class="methodology" id="methodology">
     <div class="container">
-      <div class="section-header" style="text-align:center;">
+      <div class="section-header reveal" style="text-align:center;">
         <span class="section-label">How We Test</span>
         <h2 class="section-title">Our Review Methodology</h2>
         <p class="section-desc" style="margin:0 auto;">Every host we recommend has been through our full testing process. Here's exactly what we measure.</p>
       </div>
       <div class="method-grid">
-        <div class="method-card">
+        <div class="method-card reveal reveal-stagger" style="--i:0">
           <div class="method-icon">⏱️</div>
           <div class="method-title">60-Day Hands-On Testing</div>
           <div class="method-desc">We run real WordPress sites on every host for at least 60 days before publishing any review — not just a weekend test.</div>
         </div>
-        <div class="method-card">
+        <div class="method-card reveal reveal-stagger" style="--i:1">
           <div class="method-icon">📡</div>
           <div class="method-title">Third-Party Uptime Monitoring</div>
           <div class="method-desc">We use UptimeRobot to track uptime every 5 minutes from multiple locations throughout the testing period.</div>
         </div>
-        <div class="method-card">
+        <div class="method-card reveal reveal-stagger" style="--i:2">
           <div class="method-icon">⚡</div>
           <div class="method-title">Real Speed Tests</div>
           <div class="method-desc">Load times are measured using GTmetrix and Pingdom from servers in North America, Europe, and Asia.</div>
         </div>
-        <div class="method-card">
+        <div class="method-card reveal reveal-stagger" style="--i:3">
           <div class="method-icon">💬</div>
           <div class="method-title">Support Quality Tests</div>
           <div class="method-desc">We contact every host's support team multiple times with real questions and score them on response time and quality.</div>
@@ -466,23 +519,25 @@
   <!-- BLOG -->
   <section class="section" id="blog">
     <div class="container">
-      <div class="section-header" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;">
+      <div class="section-header reveal" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;">
         <div>
           <span class="section-label">From the Blog</span>
           <h2 class="section-title">Hosting Guides & Advice</h2>
         </div>
       </div>
       <div class="posts-grid" id="postsGrid"><div class="posts-loading">Loading articles…</div></div>
-<div class="posts-see-more-wrap" id="postsSeeMoreWrap" style="display:none;text-align:center;margin-top:32px;margin-bottom:48px;">
-  <button type="button" class="btn-see-more" onclick="showAllPosts()" style="background:#1a56db;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:0.95rem;font-weight:600;cursor:pointer;">
-    See more articles →
-  </button>
-</div>
+      <div class="posts-see-more-wrap" id="postsSeeMoreWrap" style="display:none;text-align:center;margin-top:32px;">
+        <button type="button" class="btn-see-more" onclick="showAllPosts()" style="background:#1a56db;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:0.95rem;font-weight:600;cursor:pointer;">
+          See more articles →
+        </button>
+      </div>
+    </div>
+  </section>
 
   <!-- ABOUT -->
   <section class="about-strip" id="about">
     <div class="container">
-      <div class="about-grid">
+      <div class="about-grid reveal">
         <div class="about-text">
           <span class="section-label">About HostVault</span>
           <h2 class="section-title">We Test So You Don't Have To</h2>
@@ -515,7 +570,7 @@
   <!-- FAQ -->
   <section class="section" id="faq">
     <div class="container">
-      <div class="section-header" style="text-align:center;">
+      <div class="section-header reveal" style="text-align:center;">
         <span class="section-label">FAQ</span>
         <h2 class="section-title">Questions We Get Asked a Lot</h2>
       </div>
@@ -524,7 +579,7 @@
   </section>
 
   <!-- NEWSLETTER -->
-  <section class="newsletter">
+  <section class="newsletter reveal">
     <div class="container">
       <div class="newsletter-lead">🎁 Free resource inside</div>
       <h2>Get Our Free Hosting Checklist</h2>
@@ -601,7 +656,7 @@
     </div>
   </section>
 
-  <section class="newsletter">
+  <section class="newsletter reveal">
     <div class="container">
       <div class="newsletter-lead">🎁 Free resource inside</div>
       <h2>Get Our Free Hosting Checklist</h2>
@@ -875,8 +930,8 @@ function renderHosts(filter='all'){
     document.getElementById('hostsGrid').innerHTML=`<div class="no-results">No hosts match that filter combination. Try adjusting the price range or category.</div>`;
     return;
   }
-  document.getElementById('hostsGrid').innerHTML=filtered.map(h=>`
-    <article class="host-card ${h.featured?'featured':''}" data-cat="${h.category.join(' ')}">
+  document.getElementById('hostsGrid').innerHTML=filtered.map((h,i)=>`
+    <article class="host-card ${h.featured?'featured':''} reveal reveal-stagger" style="--i:${i}" data-cat="${h.category.join(' ')}">
       ${h.badge?`<div class="host-badge">${h.badge}</div>`:''}
       <div class="host-logo" style="background:${h.logoColor}">${h.logo}</div>
       <div class="host-info">
@@ -911,6 +966,7 @@ function renderHosts(filter='all'){
         <ul class="cons-list">${h.cons.map(c=>`<li>${c}</li>`).join('')}</ul>
       </div>
     </article>`).join('');
+  observeReveals();
 }
 
 function renderTable(){
@@ -926,8 +982,8 @@ function renderTable(){
     </tr>`).join('');
 }
 
-function postCardHTML(p){
-  return `<article class="post-card" onclick="openArticle('${p.id}')">
+function postCardHTML(p,i=0){
+  return `<article class="post-card reveal reveal-stagger" style="--i:${i}" onclick="openArticle('${p.id}')">
     <div class="post-thumb">
       <div class="post-thumb-inner" style="background:${p.image_color}">${p.title}</div>
       <span class="post-category">${p.category}</span>
@@ -945,6 +1001,7 @@ function postCardHTML(p){
     </div>
   </article>`;
 }
+
 const HOMEPAGE_POST_LIMIT = 6;
 
 function renderPosts(){
@@ -953,20 +1010,36 @@ function renderPosts(){
     document.getElementById('postsSeeMoreWrap').style.display='none';
     return;
   }
-  document.getElementById('postsGrid').innerHTML=posts.slice(0,HOMEPAGE_POST_LIMIT).map(p=>postCardHTML(p)).join('');
+  document.getElementById('postsGrid').innerHTML=posts.slice(0,HOMEPAGE_POST_LIMIT).map((p,i)=>postCardHTML(p,i)).join('');
   document.getElementById('postsSeeMoreWrap').style.display = posts.length>HOMEPAGE_POST_LIMIT ? 'block' : 'none';
+  observeReveals();
 }
 
 function renderAllPosts(){
-  document.getElementById('allPostsGrid').innerHTML = posts.map(p=>postCardHTML(p)).join('');
+  document.getElementById('allPostsGrid').innerHTML = posts.map((p,i)=>postCardHTML(p,i)).join('');
+  observeReveals();
 }
 
 function renderFAQ(){
   document.getElementById('faqList').innerHTML=faqs.map((f,i)=>`
-    <div class="faq-item" id="faq-${i}">
+    <div class="faq-item reveal reveal-stagger" style="--i:${i}" id="faq-${i}">
       <button class="faq-question" onclick="toggleFAQ(${i})">${f.q}<span class="faq-icon">+</span></button>
       <div class="faq-answer"><p class="faq-answer-inner">${f.a}</p></div>
     </div>`).join('');
+  observeReveals();
+
+  // Keep FAQPage structured data in sync with the actual FAQ content shown on the page
+  const faqSchema = {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity": faqs.map(f=>({
+      "@type":"Question",
+      "name": f.q,
+      "acceptedAnswer": { "@type":"Answer", "text": f.a }
+    }))
+  };
+  const schemaEl = document.getElementById('faqSchema');
+  if(schemaEl) schemaEl.textContent = JSON.stringify(faqSchema);
 }
 
 function renderFooterLinks(){
@@ -1014,6 +1087,15 @@ function showHome(){
   window.scrollTo({top:0,behavior:'smooth'});
 }
 
+function showAllPosts(){
+  renderAllPosts();
+  document.getElementById('homeView').classList.add('hidden');
+  document.getElementById('articlePage').classList.remove('active');
+  document.getElementById('allArticlesPage').classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+  document.title='All Articles — HostVault';
+}
+
 function scrollToHeading(text){
   [...document.querySelectorAll('#articleContent h2')].find(el=>el.textContent===text)
     ?.scrollIntoView({behavior:'smooth',block:'start'});
@@ -1050,11 +1132,63 @@ window.addEventListener('scroll',()=>{
   document.getElementById('backToTop').classList.toggle('visible',window.scrollY>400);
 });
 
+// =============================================================
+//  SCROLL REVEAL + STAT COUNT-UP
+// =============================================================
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const revealObserver = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('in-view');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+},{ threshold:0.15, rootMargin:'0px 0px -40px 0px' });
+
+function observeReveals(){
+  document.querySelectorAll('.reveal:not(.in-view)').forEach(el=>revealObserver.observe(el));
+}
+
+function animateCountUp(el){
+  const target = parseFloat(el.dataset.count);
+  const decimals = parseInt(el.dataset.decimal||'0',10);
+  const suffix = el.dataset.suffix||'';
+  if(prefersReducedMotion || isNaN(target)){
+    el.textContent = target.toFixed(decimals)+suffix;
+    return;
+  }
+  const duration = 1400;
+  const start = performance.now();
+  function tick(now){
+    const progress = Math.min((now-start)/duration, 1);
+    const eased = 1-Math.pow(1-progress, 3); // ease-out cubic
+    const value = target*eased;
+    el.textContent = value.toFixed(decimals)+suffix;
+    if(progress<1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+
+const heroStatsEl = document.getElementById('heroStats');
+if(heroStatsEl){
+  const statsObserver = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add('in-view');
+        entry.target.querySelectorAll('[data-count]').forEach(animateCountUp);
+        statsObserver.unobserve(entry.target);
+      }
+    });
+  },{ threshold:0.4 });
+  statsObserver.observe(heroStatsEl);
+}
+
 // Init
 renderHosts();
 renderTable();
 renderFAQ();
 loadPosts();
+observeReveals();
 </script>
 </body>
 </html>
