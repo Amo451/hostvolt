@@ -350,58 +350,6 @@ However, if your website has genuinely outgrown its resources, moving to a bette
 
 ---
 
-## Think in Performance Budgets
-
-One useful habit we encourage website owners to develop is thinking in terms of a performance budget.
-
-Every feature you add has a cost.
-
-A new live chat widget.
-
-A Facebook Pixel.
-
-Google Analytics.
-
-Heatmaps.
-
-Animations.
-
-Video backgrounds.
-
-Each one consumes a little more CPU time, memory or network bandwidth.
-
-Individually they seem harmless.
-
-Collectively they can transform a fast website into a slow one.
-
-Before adding any new feature, ask one simple question:
-
-Does this genuinely improve the visitor's experience?
-
-If not, it may not deserve a place on your website.
-
-### From the Server Room
-
-One pattern becomes obvious after troubleshooting enough websites.
-
-The websites owners worry about most usually aren't the slowest ones.
-
-The slowest websites are often those that haven't been reviewed in years.
-
-Performance problems accumulate quietly.
-
-An outdated PHP version here.
-
-A plugin installed three years ago.
-
-A database that's never been optimised.
-
-Hundreds of unnecessary image files.
-
-By the time visitors notice the slowdown, the underlying causes have often been building for months.
-
----
-
 ## How to Test Your Website Speed
 
 Before making changes, measure your current performance.
@@ -439,10 +387,6 @@ Visitors stay longer.
 Pages become easier to navigate.
 
 Bounce rates often decrease.
-
-Google has repeatedly said that page experience is one of many ranking signals.
-
-Think of website speed as supporting good SEO—not replacing it.
 
 ---
 
